@@ -63,6 +63,54 @@ main {
   width: 180px;
 }
 
+.card-profile div {
+  background-color: var(--blue);
+  padding: 1.2em 1.2em 3em 1.2em;
+  border-radius: 0.8em;
+}
+
+.card-profile div img {
+  width: 3em;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  margin-bottom: 2em;
+}
+
+.card-profile span {
+  font-size: 0.675rem;
+  opacity: 0.5;
+}
+
+.card-profile h1 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.card-profile nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.6rem;
+  padding: 1.2rem 1.4rem;
+}
+
+.btn {
+  color: var(--desaturated-blue);
+  border: none;
+  background: transparent;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--white);
+}
+
+.selected-btn {
+  color: var(--white);
+}
+
 .card-content {
   display: flex;
   flex-direction: column;
@@ -100,57 +148,15 @@ main {
 }
 
 .time-content span {
+  display: block;
   font-size: 0.675rem;
   font-weight: 300;
   color: var(--pale-blue);
+  margin-top: 0.6em;
 }
 
 .card-profile {
   grid-area: profile;
-}
-
-.card-profile div {
-  background-color: var(--blue);
-  padding: 1.2em 1.2em 3em 1.2em;
-  border-radius: 0.8em;
-}
-
-.card-profile div img {
-  width: 3em;
-  border: 2px solid var(--white);
-  border-radius: 50%;
-  margin-bottom: 2em;
-}
-
-.card-profile span {
-  font-size: 0.675rem;
-  opacity: 0.5;
-}
-
-.card-profile h1 {
-  font-weight: 300;
-  font-size: 2rem;
-}
-
-.card-profile ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 1.2em;
-}
-
-.card-profile ul li {
-  margin: 0.3em;
-}
-
-.card-profile li a {
-  text-decoration: none;
-  font-size: 0.8rem;
-  color: var(--desaturated-blue);
-}
-
-.card-profile li a:hover {
-  color: var(--white);
 }
 
 .card.work {
@@ -203,6 +209,9 @@ main {
     flex-direction: row;
     width: auto;
   }
+  .card-profile nav {
+    justify-content: space-around;
+  }
   .card {
     width: 100%;
   }
@@ -210,16 +219,17 @@ main {
 
 @media (max-width: 430px) {
   main {
-    grid-template-areas: "profile"
-                        "work"
-                        "play"
-                        "study"
-                        "exercise"
-                        "social"
-                        "self-care";
+    grid-template-areas:
+      "profile"
+      "work"
+      "play"
+      "study"
+      "exercise"
+      "social"
+      "self-care";
     margin: 4em auto;
   }
-  .card-profile{
+  .card-profile {
     display: flex;
     flex-direction: column;
     width: 327px;
@@ -238,13 +248,12 @@ main {
   }
   .card-profile h1 {
     font-size: 1.7rem;
-    margin: auto
+    margin: auto;
   }
-  .card-profile ul {
-    display: flex;
+  .card-profile nav {
     flex-direction: row;
     justify-content: space-around;
-    margin: 1.2em 0;
+    margin: 0.6em 0;
   }
   .card-profile ul li {
     margin: 0;
@@ -258,7 +267,7 @@ main {
   .header img {
     width: 1.2em;
   }
-  .header h2{
+  .header h2 {
     font-size: 1.2rem;
   }
   .time-content {
