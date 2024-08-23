@@ -51,7 +51,7 @@ main {
     "profile exercise social self-care ";
   place-content: center;
   gap: 1.2em;
-  height: 100vh;
+  height: 100%;
 }
 
 .card-profile,
