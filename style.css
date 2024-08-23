@@ -51,7 +51,7 @@ main {
     "profile exercise social self-care ";
   place-content: center;
   gap: 1.2em;
-  height: 100%;
+  height: 100vh;
 }
 
 .card-profile,
@@ -217,7 +217,7 @@ main {
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 475px) {
   main {
     grid-template-areas:
       "profile"
@@ -227,6 +227,7 @@ main {
       "exercise"
       "social"
       "self-care";
+    height: 100%;
     margin: 4em auto;
   }
   .card-profile {
