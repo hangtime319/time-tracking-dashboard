@@ -27,10 +27,6 @@ monthlyBtn.addEventListener("click", function () {
   getData("monthly");
 });
 
-function insertAfter(newElement, reference) {
-  reference.parentNode.insertBefore(newElement, reference.nextSibling);
-}
-
 function getData(timeFrame) {
   fetch("./data.json")
     .then((request) => {
